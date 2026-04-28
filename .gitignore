@@ -1,0 +1,19 @@
+# Data (too large / sensitive)
+data/*.csv
+!data/sample_data.csv
+
+# Trained model (too large for git)
+*.pkl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+.env
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 2080" width="920" height="2080" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+
+  <!-- ── DEFS ─────────────────────────────────────────────── -->
+  <defs>
+    <!-- Blue process block gradient -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B6CA8;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#154E80;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Green data node gradient -->
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E8449;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#196040;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Orange decision diamond gradient -->
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4680A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#A84F08;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Sub-box light blue -->
+    <linearGradient id="subBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2874A6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1F5F8A;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Sub-box teal -->
+    <linearGradient id="subTeal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#148A72;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0E6657;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Purple track -->
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6C3483;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#512E6B;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Final green output -->
+    <linearGradient id="finalGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1D8348;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#166037;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#00000033"/>
+    </filter>
+    <!-- Lighter shadow for sub-boxes -->
+    <filter id="softShadow" x="-3%" y="-3%" width="106%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#00000025"/>
+    </filter>
+    <!-- Arrow marker -->
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#455A64"/>
+    </marker>
+    <!-- Blue arrow -->
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1B6CA8"/>
+    </marker>
+    <!-- White arrow for inside blocks -->
+    <marker id="arrowWhite" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FFFFFF88"/>
+    </marker>
+    <!-- Small connector arrow -->
+    <marker id="arrowSm" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#78909C"/>
+    </marker>
+  </defs>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- BACKGROUND                                              -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <rect width="920" height="2080" fill="#F0F4F8" rx="0"/>
+  <!-- Subtle grid texture -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#CBD5E0" stroke-width="0.4" opacity="0.5"/>
+  </pattern>
+  <rect width="920" height="2080" fill="url(#grid)"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="920" height="62" fill="#0D2137" rx="0"/>
+  <text x="460" y="24" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700" letter-spacing="2">SYSTEM ARCHITECTURE</text>
+  <text x="460" y="46" text-anchor="middle" fill="#90CAF9" font-size="11" font-weight="400">Machine Learning Pipeline for Diabetes Risk Classification  |  Figure 8.1</text>
+
+  <!-- ─── LEFT MARGIN MODULE LABELS ─────────────────────────── -->
+  <!-- Module label background strip -->
+  <rect x="0" y="62" width="38" height="2018" fill="#1B2A3B" opacity="0.9"/>
+  <!-- M1 -->
+  <text transform="translate(22,230) rotate(-90)" text-anchor="middle" fill="#90CAF9" font-size="9.5" font-weight="700" letter-spacing="1.5">MODULE 1</text>
+  <!-- M2 -->
+  <text transform="translate(22,450) rotate(-90)" text-anchor="middle" fill="#A5D6A7" font-size="9.5" font-weight="700" letter-spacing="1.5">MODULE 2</text>
+  <!-- M3 -->
+  <text transform="translate(22,720) rotate(-90)" text-anchor="middle" fill="#81D4FA" font-size="9.5" font-weight="700" letter-spacing="1.5">MODULE 3</text>
+  <!-- M4 -->
+  <text transform="translate(22,980) rotate(-90)" text-anchor="middle" fill="#FFCC80" font-size="9.5" font-weight="700" letter-spacing="1.5">MODULE 4</text>
+  <!-- M5 -->
+  <text transform="translate(22,1340) rotate(-90)" text-anchor="middle" fill="#CE93D8" font-size="9.5" font-weight="700" letter-spacing="1.5">MODULE 5</text>
+  <!-- M6 -->
+  <text transform="translate(22,1760) rotate(-90)" text-anchor="middle" fill="#80CBC4" font-size="9.5" font-weight="700" letter-spacing="1.5">MODULE 6</text>
+
+  <!-- ══════════════════════════════════════════════════════════
+       BLOCK 1 — DATA INGESTION (Green parallelogram)
+  ═══════════════════════════════════════════════════════════ -->
+  <!-- Parallelogram via polygon: slant 18px each side -->
+  <polygon points="88,88 832,88 850,192 70,192" fill="url(#greenGrad)" filter="url(#shadow)" rx="6"/>
+  <!-- Inner highlight line -->
+  <line x1="88" y1="100" x2="832" y2="100" stroke="#FFFFFF18" stroke-width="1"/>
+  <!-- Header label -->
+  <text x="460" y="114" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" letter-spacing="1">▶  BLOCK 1: DATA INGESTION</text>
+  <!-- Body text -->
+  <text x="460" y="134" text-anchor="middle" fill="#D5F5E3" font-size="10.5">Input: diabetes_risk_dataset.csv  —  6,000 rows × 19 columns</text>
+  <text x="460" y="152" text-anchor="middle" fill="#D5F5E3" font-size="10.5">Drop:  Patient_ID  (identifier, non-informative)</text>
+  <text x="460" y="169" text-anchor="middle" fill="#FFD580" font-size="10.5" font-weight="600">Drop:  diabetes_risk_score  ⚠ DATA LEAKAGE — directly encodes target</text>
+  <!-- Corner badge -->
+  <rect x="72" y="90" width="80" height="18" rx="4" fill="#FFFFFF22"/>
+  <text x="112" y="103" text-anchor="middle" fill="#D5F5E3" font-size="9" font-weight="700">INPUT DATA</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="460" y1="192" x2="460" y2="234" stroke="#455A64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="390" y="202" width="140" height="18" rx="9" fill="#37474F"/>
+  <text x="460" y="215" text-anchor="middle" fill="#CFD8DC" font-size="9.5" font-weight="600">6,000 × 17 features</text>
+
+  <!-- ══════════════════════════════════════════════════════════
+       BLOCK 2 — EXPLORATORY DATA ANALYSIS (Blue rect)
+  ═══════════════════════════════════════════════════════════ -->
+  <rect x="70" y="236" width="780" height="148" rx="8" fill="url(#blueGrad)" filter="url(#shadow)"/>
+  <line x1="70" y1="260" x2="850" y2="260" stroke="#FFFFFF15" stroke-width="1"/>
+  <text x="460" y="254" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" letter-spacing="1">▶  BLOCK 2: EXPLORATORY DATA ANALYSIS</text>
+  <!-- 4 EDA sub-boxes -->
+  <!-- Box A -->
+  <rect x="86" y="268" width="172" height="100" rx="6" fill="#1F5F8A" filter="url(#softShadow)"/>
+  <rect x="86" y="268" width="172" height="22" rx="6" fill="#1565C0"/>
+  <rect x="86" y="282" width="172" height="8" rx="0" fill="#1565C0"/>
+  <text x="172" y="283" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">Class Distribution</text>
+  <text x="172" y="300" text-anchor="middle" fill="#B3D1F5" font-size="9">Low Risk: 43.4% (2,602)</text>
+  <text x="172" y="313" text-anchor="middle" fill="#B3D1F5" font-size="9">Prediabetes: 19.2% (1,153)</text>
+  <text x="172" y="326" text-anchor="middle" fill="#B3D1F5" font-size="9">High Risk: 37.4% (2,245)</text>
+  <text x="172" y="342" text-anchor="middle" fill="#FFD580" font-size="8.5" font-weight="600">IR = 2.26 (mild imbalance)</text>
+  <text x="172" y="357" text-anchor="middle" fill="#B3D1F5" font-size="8.5">→ Pie chart visualisation</text>
+  <!-- Box B -->
+  <rect x="270" y="268" width="172" height="100" rx="6" fill="#1F5F8A" filter="url(#softShadow)"/>
+  <rect x="270" y="268" width="172" height="22" rx="6" fill="#1565C0"/>
+  <rect x="270" y="282" width="172" height="8" rx="0" fill="#1565C0"/>
+  <text x="356" y="283" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">Feature Distributions</text>
+  <text x="356" y="300" text-anchor="middle" fill="#B3D1F5" font-size="9">Histograms (50 bins) per feature</text>
+  <text x="356" y="313" text-anchor="middle" fill="#B3D1F5" font-size="9">Detect skew, capping, outliers</text>
+  <text x="356" y="326" text-anchor="middle" fill="#B3D1F5" font-size="9">Missing values: 0 (none)</text>
+  <text x="356" y="342" text-anchor="middle" fill="#FFD580" font-size="8.5" font-weight="600">HbA1c, glucose: right-skewed</text>
+  <text x="356" y="357" text-anchor="middle" fill="#B3D1F5" font-size="8.5">→ 17-panel histogram plot</text>
+  <!-- Box C -->
+  <rect x="454" y="268" width="172" height="100" rx="6" fill="#1F5F8A" filter="url(#softShadow)"/>
+  <rect x="454" y="268" width="172" height="22" rx="6" fill="#1565C0"/>
+  <rect x="454" y="282" width="172" height="8" rx="0" fill="#1565C0"/>
+  <text x="540" y="283" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">Correlation Analysis</text>
+  <text x="540" y="300" text-anchor="middle" fill="#B3D1F5" font-size="9">Pearson's r matrix (17×17)</text>
+  <text x="540" y="313" text-anchor="middle" fill="#B3D1F5" font-size="9">HbA1c ↔ target: r=0.71</text>
+  <text x="540" y="326" text-anchor="middle" fill="#B3D1F5" font-size="9">Glucose ↔ target: r=0.68</text>
+  <text x="540" y="342" text-anchor="middle" fill="#FFD580" font-size="8.5" font-weight="600">BMI ↔ waist: r=0.83 (collinear)</text>
+  <text x="540" y="357" text-anchor="middle" fill="#B3D1F5" font-size="8.5">→ Seaborn heatmap</text>
+  <!-- Box D -->
+  <rect x="638" y="268" width="196" height="100" rx="6" fill="#1F5F8A" filter="url(#softShadow)"/>
+  <rect x="638" y="268" width="196" height="22" rx="6" fill="#1565C0"/>
+  <rect x="638" y="282" width="196" height="8" rx="0" fill="#1565C0"/>
+  <text x="736" y="283" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">Data Quality Report</text>
+  <text x="736" y="300" text-anchor="middle" fill="#B3D1F5" font-size="9">Missing values: 0 / 6,000</text>
+  <text x="736" y="313" text-anchor="middle" fill="#B3D1F5" font-size="9">Duplicate rows: checked</text>
+  <text x="736" y="326" text-anchor="middle" fill="#B3D1F5" font-size="9">Dtypes: float64 (14), object (3)</text>
+  <text x="736" y="342" text-anchor="middle" fill="#A5D6A7" font-size="8.5" font-weight="600">✔  No imputation needed pre-split</text>
+  <text x="736" y="357" text-anchor="middle" fill="#B3D1F5" font-size="8.5">→ pandas .info() / .describe()</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="460" y1="384" x2="460" y2="424" stroke="#455A64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="356" y="394" width="208" height="18" rx="9" fill="#37474F"/>
+  <text x="460" y="407" text-anchor="middle" fill="#CFD8DC" font-size="9.5" font-weight="600">Stratified Split  →  Train: 4,800  |  Test: 1,200</text>
+
+  <!-- ══════════════════════════════════════════════════════════
+       BLOCK 3 — PREPROCESSING PIPELINE (Blue rect)
+  ═══════════════════════════════════════════════════════════ -->
+  <rect x="70" y="426" width="780" height="202" rx="8" fill="url(#blueGrad)" filter="url(#shadow)"/>
+  <line x1="70" y1="450" x2="850" y2="450" stroke="#FFFFFF15" stroke-width="1"/>
+  <text x="460" y="444" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" letter-spacing="1">▶  BLOCK 3: PREPROCESSING PIPELINE  (ColumnTransformer)</text>
+
+  <!-- Left sub-branch: Numeric -->
+  <rect x="86" y="458" width="336" height="154" rx="7" fill="#0D3B5E" filter="url(#softShadow)"/>
+  <rect x="86" y="458" width="336" height="24" rx="7" fill="#1565C0"/>
+  <rect x="86" y="474" width="336" height="8" rx="0" fill="#1565C0"/>
+  <text x="254" y="474" text-anchor="middle" fill="#FFFFFF" font-size="10.5" font-weight="700">📊  NUMERIC PATH  (17 features)</text>
+  <!-- Step 1 -->
+  <rect x="100" y="490" width="140" height="50" rx="5" fill="url(#subBlue)"/>
+  <text x="170" y="507" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">SimpleImputer</text>
+  <text x="170" y="521" text-anchor="middle" fill="#B3D1F5" font-size="8.5">strategy = "median"</text>
+  <text x="170" y="534" text-anchor="middle" fill="#90CAF9" font-size="8">Robust to outliers</text>
+  <!-- Arrow -->
+  <line x1="246" y1="515" x2="268" y2="515" stroke="#FFFFFF60" stroke-width="1.5" marker-end="url(#arrowWhite)"/>
+  <!-- Step 2 -->
+  <rect x="268" y="490" width="140" height="50" rx="5" fill="url(#subBlue)"/>
+  <text x="338" y="507" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">StandardScaler</text>
+  <text x="338" y="521" text-anchor="middle" fill="#B3D1F5" font-size="8.5">μ=0, σ=1</text>
+  <text x="338" y="534" text-anchor="middle" fill="#90CAF9" font-size="8">Required: LR, SVM, KNN, MLP</text>
+  <!-- Note -->
+  <text x="254" y="558" text-anchor="middle" fill="#90CAF9" font-size="8.5" font-style="italic">Fit on train only → transform train+test</text>
+  <!-- Output badge -->
+  <rect x="130" y="568" width="250" height="34" rx="5" fill="#1565C0AA"/>
+  <text x="255" y="581" text-anchor="middle" fill="#FFFFFF" font-size="8.5" font-weight="700">Output: Dense matrix  (4,800 × 17)</text>
+  <text x="255" y="595" text-anchor="middle" fill="#A5D6A7" font-size="8">All values ∈ ~ [−3, +3] after scaling</text>
+
+  <!-- Right sub-branch: Categorical -->
+  <rect x="434" y="458" width="400" height="154" rx="7" fill="#0D3B2E" filter="url(#softShadow)"/>
+  <rect x="434" y="458" width="400" height="24" rx="7" fill="#1B7A4A"/>
+  <rect x="434" y="474" width="400" height="8" rx="0" fill="#1B7A4A"/>
+  <text x="634" y="474" text-anchor="middle" fill="#FFFFFF" font-size="10.5" font-weight="700">🏷  CATEGORICAL PATH  (3 features)</text>
+  <!-- Feature list -->
+  <text x="452" y="495" fill="#D5F5E3" font-size="9">• physical_activity_level  →  Low=0 | Moderate=1 | High=2</text>
+  <text x="452" y="509" fill="#D5F5E3" font-size="9">• family_history_diabetes  →  No=0 | Yes=1</text>
+  <text x="452" y="523" fill="#D5F5E3" font-size="9">• gender                   →  Male=0 | Female=1</text>
+  <!-- Step boxes -->
+  <rect x="444" y="532" width="168" height="44" rx="5" fill="url(#subTeal)"/>
+  <text x="528" y="550" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">SimpleImputer</text>
+  <text x="528" y="564" text-anchor="middle" fill="#B2DFDB" font-size="8.5">strategy = "most_frequent"</text>
+  <!-- Arrow -->
+  <line x1="616" y1="554" x2="636" y2="554" stroke="#FFFFFF60" stroke-width="1.5" marker-end="url(#arrowWhite)"/>
+  <rect x="636" y="532" width="178" height="44" rx="5" fill="url(#subTeal)"/>
+  <text x="725" y="550" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">OrdinalEncoder</text>
+  <text x="725" y="564" text-anchor="middle" fill="#B2DFDB" font-size="8.5">Preserves ordinal structure</text>
+  <!-- Output badge -->
+  <rect x="494" y="584" width="280" height="22" rx="5" fill="#1B7A4AAA"/>
+  <text x="634" y="599" text-anchor="middle" fill="#FFFFFF" font-size="8.5" font-weight="700">Output: Array  (4,800 × 3)  integer encoded</text>
+
+  <!-- Merge arrow (both branches → unified) -->
+  <!-- Left branch down -->
+  <line x1="254" y1="628" x2="254" y2="650" stroke="#78909C" stroke-width="1.8"/>
+  <!-- Right branch down -->
+  <line x1="634" y1="628" x2="634" y2="650" stroke="#78909C" stroke-width="1.8"/>
+  <!-- Horizontal connector -->
+  <line x1="254" y1="650" x2="634" y2="650" stroke="#78909C" stroke-width="1.8"/>
+  <!-- Down to merge node -->
+  <line x1="460" y1="650" x2="460" y2="668" stroke="#455A64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- Merge label -->
+  <rect x="356" y="638" width="208" height="18" rx="9" fill="#37474F"/>
+  <text x="460" y="650" text-anchor="middle" fill="#CFD8DC" font-size="9.5" font-weight="600">Concatenate → Unified X  (4,800 × 20)</text>
+
+  <!-- ══════════════════════════════════════════════════════════
+       BLOCK 4 — FEATURE ENGINEERING (Orange diamond shape block)
+  ═══════════════════════════════════════════════════════════ -->
+  <!-- Diamond approximated as a rectangle with pointy top/bottom banner -->
+  <rect x="70" y="672" width="780" height="172" rx="8" fill="#7D3C00" filter="url(#shadow)"/>
+  <!-- Orange header -->
+  <rect x="70" y="672" width="780" height="28" rx="8" fill="url(#orangeGrad)"/>
+  <rect x="70" y="692" width="780" height="8" rx="0" fill="url(#orangeGrad)"/>
+  <text x="460" y="690" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" letter-spacing="1">▶  BLOCK 4: FEATURE ENGINEERING  (Domain-Driven Ratio Features)</text>
+  <!-- 4 formula boxes -->
+  <rect x="82" y="708" width="182" height="78" rx="6" fill="#A04000" filter="url(#softShadow)"/>
+  <text x="173" y="726" text-anchor="middle" fill="#FFD580" font-size="9.5" font-weight="700">glucose_insulin_ratio</text>
+  <text x="173" y="742" text-anchor="middle" fill="#FFFFFF" font-size="9" font-style="italic">= Fasting_Glucose</text>
+  <text x="173" y="756" text-anchor="middle" fill="#FFFFFF" font-size="9" font-style="italic">   / (Insulin + 1e-5)</text>
+  <text x="173" y="773" text-anchor="middle" fill="#FFCC80" font-size="8">Pancreatic function proxy</text>
+
+  <rect x="276" y="708" width="182" height="78" rx="6" fill="#A04000" filter="url(#softShadow)"/>
+  <text x="367" y="726" text-anchor="middle" fill="#FFD580" font-size="9.5" font-weight="700">bmi_age_ratio</text>
+  <text x="367" y="742" text-anchor="middle" fill="#FFFFFF" font-size="9" font-style="italic">= BMI / Age</text>
+  <text x="367" y="756" text-anchor="middle" fill="#FFFFFF" font-size="9" font-style="italic"> </text>
+  <text x="367" y="773" text-anchor="middle" fill="#FFCC80" font-size="8">Age-adjusted adiposity</text>
+
+  <rect x="470" y="708" width="182" height="78" rx="6" fill="#A04000" filter="url(#softShadow)"/>
+  <text x="561" y="726" text-anchor="middle" fill="#FFD580" font-size="9.5" font-weight="700">waist_bmi_ratio</text>
+  <text x="561" y="742" text-anchor="middle" fill="#FFFFFF" font-size="9" font-style="italic">= Waist_Circumference</text>
+  <text x="561" y="756" text-anchor="middle" fill="#FFFFFF" font-size="9" font-style="italic">   / BMI</text>
+  <text x="561" y="773" text-anchor="middle" fill="#FFCC80" font-size="8">Central adiposity index</text>
+
+  <rect x="664" y="708" width="180" height="78" rx="6" fill="#A04000" filter="url(#softShadow)"/>
+  <text x="754" y="726" text-anchor="middle" fill="#FFD580" font-size="9.5" font-weight="700">calorie_activity</text>
+  <text x="754" y="742" text-anchor="middle" fill="#FFFFFF" font-size="9" font-style="italic">= Calories</text>
+  <text x="754" y="756" text-anchor="middle" fill="#FFFFFF" font-size="9" font-style="italic">   / Activity_Ordinal</text>
+  <text x="754" y="773" text-anchor="middle" fill="#FFCC80" font-size="8">Caloric load vs. expenditure</text>
+
+  <!-- Combine note -->
+  <rect x="194" y="796" width="532" height="38" rx="6" fill="#5D2E00"/>
+  <text x="460" y="811" text-anchor="middle" fill="#FFD580" font-size="9.5" font-weight="700">Combined with preprocessed X  →  X_final  (4,800 × 21 features)</text>
+  <text x="460" y="826" text-anchor="middle" fill="#FFCC80" font-size="8.5">4 engineered + 17 original features  |  Computed BEFORE train/test split (no leakage)</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="460" y1="844" x2="460" y2="886" stroke="#455A64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="356" y="854" width="208" height="18" rx="9" fill="#37474F"/>
+  <text x="460" y="867" text-anchor="middle" fill="#CFD8DC" font-size="9.5" font-weight="600">X_final: 4,800 train × 21  |  1,200 test × 21</text>
+
+  <!-- ══════════════════════════════════════════════════════════
+       BLOCK 5 — MODEL TRAINING (Blue rect with 2 parallel tracks)
+  ═══════════════════════════════════════════════════════════ -->
+  <rect x="70" y="888" width="780" height="388" rx="8" fill="url(#blueGrad)" filter="url(#shadow)"/>
+  <line x1="70" y1="912" x2="850" y2="912" stroke="#FFFFFF15" stroke-width="1"/>
+  <text x="460" y="906" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" letter-spacing="1">▶  BLOCK 5: MODEL TRAINING &amp; EVALUATION</text>
+
+  <!-- Track (A): Individual Classifiers -->
+  <rect x="82" y="920" width="374" height="342" rx="7" fill="#0B2E4A" filter="url(#softShadow)"/>
+  <rect x="82" y="920" width="374" height="26" rx="7" fill="#0D47A1"/>
+  <rect x="82" y="938" width="374" height="8" rx="0" fill="#0D47A1"/>
+  <text x="269" y="937" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700">TRACK A — 9 Individual Classifiers</text>
+  <!-- CV badge -->
+  <rect x="100" y="952" width="338" height="20" rx="4" fill="#1565C055"/>
+  <text x="269" y="965" text-anchor="middle" fill="#90CAF9" font-size="9" font-weight="600">10-Fold Stratified CV  |  Scoring: f1_weighted</text>
+  <!-- Model table rows -->
+  <rect x="96" y="978" width="348" height="14" rx="2" fill="#1565C033"/>
+  <text x="108" y="989" fill="#FFFFFF" font-size="8.5" font-weight="700">Model</text>
+  <text x="330" y="989" text-anchor="end" fill="#FFFFFF" font-size="8.5" font-weight="700">CV F1</text>
+  <text x="423" y="989" text-anchor="end" fill="#FFFFFF" font-size="8.5" font-weight="700">Test AUC</text>
+
+  <!-- Models list -->
+  <!-- LR -->
+  <text x="108" y="1006" fill="#B3D1F5" font-size="8.5">Logistic Regression</text>
+  <rect x="290" y="997" width="66" height="11" rx="2" fill="#1B6CA888"/>
+  <rect x="290" y="997" width="61" height="11" rx="2" fill="#42A5F5AA"/>
+  <text x="362" y="1006" text-anchor="end" fill="#FFD580" font-size="8.5" font-weight="700">0.9132</text>
+  <text x="429" y="1006" text-anchor="end" fill="#A5D6A7" font-size="8.5">0.9873</text>
+  <!-- KNN -->
+  <text x="108" y="1021" fill="#B3D1F5" font-size="8.5">K-Nearest Neighbours</text>
+  <rect x="290" y="1012" width="66" height="11" rx="2" fill="#1B6CA888"/>
+  <rect x="290" y="1012" width="50" height="11" rx="2" fill="#42A5F5AA"/>
+  <text x="362" y="1021" text-anchor="end" fill="#FFD580" font-size="8.5" font-weight="700">0.8487</text>
+  <text x="429" y="1021" text-anchor="end" fill="#A5D6A7" font-size="8.5">0.9620</text>
+  <!-- NB -->
+  <text x="108" y="1036" fill="#B3D1F5" font-size="8.5">Naive Bayes (Gaussian)</text>
+  <rect x="290" y="1027" width="66" height="11" rx="2" fill="#1B6CA888"/>
+  <rect x="290" y="1027" width="48" height="11" rx="2" fill="#42A5F5AA"/>
+  <text x="362" y="1036" text-anchor="end" fill="#FFD580" font-size="8.5" font-weight="700">0.8380</text>
+  <text x="429" y="1036" text-anchor="end" fill="#A5D6A7" font-size="8.5">0.9671</text>
+  <!-- DT -->
+  <text x="108" y="1051" fill="#B3D1F5" font-size="8.5">Decision Tree</text>
+  <rect x="290" y="1042" width="66" height="11" rx="2" fill="#1B6CA888"/>
+  <rect x="290" y="1042" width="54" height="11" rx="2" fill="#42A5F5AA"/>
+  <text x="362" y="1051" text-anchor="end" fill="#FFD580" font-size="8.5" font-weight="700">0.8759</text>
+  <text x="429" y="1051" text-anchor="end" fill="#A5D6A7" font-size="8.5">0.9416</text>
+  <!-- SVM -->
+  <text x="108" y="1066" fill="#B3D1F5" font-size="8.5">SVM (RBF kernel)</text>
+  <rect x="290" y="1057" width="66" height="11" rx="2" fill="#1B6CA888"/>
+  <rect x="290" y="1057" width="58" height="11" rx="2" fill="#42A5F5AA"/>
+  <text x="362" y="1066" text-anchor="end" fill="#FFD580" font-size="8.5" font-weight="700">0.9018</text>
+  <text x="429" y="1066" text-anchor="end" fill="#A5D6A7" font-size="8.5">0.9863</text>
+  <!-- RF -->
+  <rect x="96" y="1071" width="348" height="14" rx="2" fill="#1565C018"/>
+  <text x="108" y="1081" fill="#B3D1F5" font-size="8.5">Random Forest</text>
+  <rect x="290" y="1072" width="66" height="11" rx="2" fill="#1B6CA888"/>
+  <rect x="290" y="1072" width="58" height="11" rx="2" fill="#42A5F5AA"/>
+  <text x="362" y="1081" text-anchor="end" fill="#FFD580" font-size="8.5" font-weight="700">0.9016</text>
+  <text x="429" y="1081" text-anchor="end" fill="#A5D6A7" font-size="8.5">0.9846</text>
+  <!-- GB -->
+  <text x="108" y="1096" fill="#B3D1F5" font-size="8.5">Gradient Boosting</text>
+  <rect x="290" y="1087" width="66" height="11" rx="2" fill="#1B6CA888"/>
+  <rect x="290" y="1087" width="60" height="11" rx="2" fill="#42A5F5AA"/>
+  <text x="362" y="1096" text-anchor="end" fill="#FFD580" font-size="8.5" font-weight="700">0.9105</text>
+  <text x="429" y="1096" text-anchor="end" fill="#A5D6A7" font-size="8.5">0.9850</text>
+  <!-- MLP -->
+  <text x="108" y="1111" fill="#B3D1F5" font-size="8.5">MLP Neural Network</text>
+  <rect x="290" y="1102" width="66" height="11" rx="2" fill="#1B6CA888"/>
+  <rect x="290" y="1102" width="58" height="11" rx="2" fill="#42A5F5AA"/>
+  <text x="362" y="1111" text-anchor="end" fill="#FFD580" font-size="8.5" font-weight="700">0.9019</text>
+  <text x="429" y="1111" text-anchor="end" fill="#A5D6A7" font-size="8.5">0.9873</text>
+  <!-- XGB -->
+  <text x="108" y="1126" fill="#B3D1F5" font-size="8.5">XGBoost</text>
+  <rect x="290" y="1117" width="66" height="11" rx="2" fill="#1B6CA888"/>
+  <rect x="290" y="1117" width="59" height="11" rx="2" fill="#42A5F5AA"/>
+  <text x="362" y="1126" text-anchor="end" fill="#FFD580" font-size="8.5" font-weight="700">0.9064</text>
+  <text x="429" y="1126" text-anchor="end" fill="#A5D6A7" font-size="8.5">0.9843</text>
+
+  <!-- Test set evaluation box -->
+  <rect x="96" y="1140" width="348" height="52" rx="5" fill="#1A237E88"/>
+  <text x="270" y="1156" text-anchor="middle" fill="#FFD580" font-size="9" font-weight="700">Test Set Evaluation (n=1,200)</text>
+  <text x="270" y="1170" text-anchor="middle" fill="#B3D1F5" font-size="8.5">Accuracy | F1-Weighted | AUC-ROC (OvR)</text>
+  <text x="270" y="1183" text-anchor="middle" fill="#A5D6A7" font-size="8.5">per-class: Precision | Recall | F1 | Support</text>
+  <!-- Confusion matrix note -->
+  <rect x="96" y="1198" width="348" height="52" rx="5" fill="#0D1B3E"/>
+  <text x="270" y="1214" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="700">Confusion Matrix  +  ROC Curves (OvR)</text>
+  <text x="270" y="1228" text-anchor="middle" fill="#90CAF9" font-size="8.5">Low Risk: F1=0.94  |  Prediabetes: F1=0.78</text>
+  <text x="270" y="1241" text-anchor="middle" fill="#90CAF9" font-size="8.5">High Risk: F1=0.95  |  Best AUC: 0.9877</text>
+
+  <!-- Track (B): Ensemble Models -->
+  <rect x="468" y="920" width="374" height="342" rx="7" fill="#2D1B4E" filter="url(#softShadow)"/>
+  <rect x="468" y="920" width="374" height="26" rx="7" fill="#6A1B9A"/>
+  <rect x="468" y="938" width="374" height="8" rx="0" fill="#6A1B9A"/>
+  <text x="655" y="937" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700">TRACK B — 2 Ensemble Strategies</text>
+
+  <!-- Soft Voting sub-box -->
+  <rect x="480" y="952" width="350" height="138" rx="6" fill="#3D1468" filter="url(#softShadow)"/>
+  <rect x="480" y="952" width="350" height="20" rx="6" fill="#7B1FA2"/>
+  <rect x="480" y="964" width="350" height="8" rx="0" fill="#7B1FA2"/>
+  <text x="655" y="966" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">SOFT VOTING ENSEMBLE  (Top-3 by AUC)</text>
+  <text x="655" y="983" text-anchor="middle" fill="#CE93D8" font-size="8.5">Members: Logistic Regression  +  MLP  +  SVM (RBF)</text>
+  <!-- Mini arrow chain -->
+  <rect x="492" y="991" width="84" height="28" rx="4" fill="#512DA8AA"/>
+  <text x="534" y="1003" text-anchor="middle" fill="#FFFFFF" font-size="8" font-weight="700">LR probs</text>
+  <text x="534" y="1014" text-anchor="middle" fill="#CE93D8" font-size="7.5">P_LR(c|x)</text>
+  <line x1="578" y1="1005" x2="594" y2="1005" stroke="#FFFFFF50" stroke-width="1" marker-end="url(#arrowWhite)"/>
+  <rect x="596" y="991" width="84" height="28" rx="4" fill="#512DA8AA"/>
+  <text x="638" y="1003" text-anchor="middle" fill="#FFFFFF" font-size="8" font-weight="700">MLP probs</text>
+  <text x="638" y="1014" text-anchor="middle" fill="#CE93D8" font-size="7.5">P_MLP(c|x)</text>
+  <line x1="682" y1="1005" x2="698" y2="1005" stroke="#FFFFFF50" stroke-width="1" marker-end="url(#arrowWhite)"/>
+  <rect x="700" y="991" width="88" height="28" rx="4" fill="#512DA8AA"/>
+  <text x="744" y="1003" text-anchor="middle" fill="#FFFFFF" font-size="8" font-weight="700">SVM probs</text>
+  <text x="744" y="1014" text-anchor="middle" fill="#CE93D8" font-size="7.5">P_SVM(c|x)</text>
+  <!-- Decision rule -->
+  <rect x="492" y="1024" width="346" height="24" rx="4" fill="#1A0533"/>
+  <text x="655" y="1038" text-anchor="middle" fill="#FFD580" font-size="9" font-style="italic">ŷ = argmax_c [ ⅓ × Σ P_j(c|x) ]</text>
+  <!-- Result -->
+  <rect x="522" y="1054" width="266" height="28" rx="4" fill="#2E7D32AA"/>
+  <text x="655" y="1065" text-anchor="middle" fill="#FFFFFF" font-size="8.5" font-weight="700">Result: Acc=0.9150 | F1=0.9147 | AUC=0.9877 ★</text>
+  <text x="655" y="1077" text-anchor="middle" fill="#A5D6A7" font-size="8">★ HIGHEST AUC of all configurations</text>
+
+  <!-- Stacking sub-box -->
+  <rect x="480" y="1100" width="350" height="148" rx="6" fill="#1A2A4A" filter="url(#softShadow)"/>
+  <rect x="480" y="1100" width="350" height="20" rx="6" fill="#283593"/>
+  <rect x="480" y="1112" width="350" height="8" rx="0" fill="#283593"/>
+  <text x="655" y="1114" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">STACKING ENSEMBLE  (5-fold OOF)</text>
+  <text x="655" y="1132" text-anchor="middle" fill="#9FA8DA" font-size="8.5">Base: RF + GB + SVM + XGBoost</text>
+  <text x="655" y="1146" text-anchor="middle" fill="#9FA8DA" font-size="8.5">Meta-Learner: Logistic Regression</text>
+  <!-- Phase labels -->
+  <text x="492" y="1164" fill="#64B5F6" font-size="8.5" font-weight="700">Phase 1 (Base Layer):</text>
+  <text x="492" y="1177" fill="#9FA8DA" font-size="8">5-fold OOF predictions → meta-feature matrix Z (4,800 × 12)</text>
+  <text x="492" y="1192" fill="#64B5F6" font-size="8.5" font-weight="700">Phase 2 (Meta Layer):</text>
+  <text x="492" y="1205" fill="#9FA8DA" font-size="8">LogReg trains on Z → final class prediction</text>
+  <!-- Result -->
+  <rect x="522" y="1214" width="266" height="24" rx="4" fill="#1B5E2088"/>
+  <text x="655" y="1228" text-anchor="middle" fill="#FFFFFF" font-size="8.5" font-weight="700">Result: Acc=0.9133 | F1=0.9126 | AUC=0.9861</text>
+
+  <!-- Decision diamond: Which is best? -->
+  <polygon points="460,1286 580,1310 460,1334 340,1310" fill="url(#orangeGrad)" filter="url(#shadow)"/>
+  <text x="460" y="1305" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">Best Model?</text>
+  <text x="460" y="1319" text-anchor="middle" fill="#FFE0B2" font-size="8.5">AUC comparison</text>
+
+  <!-- Decision outputs -->
+  <text x="304" y="1308" text-anchor="middle" fill="#FF8F00" font-size="8.5">Voting Ensemble</text>
+  <text x="304" y="1320" text-anchor="middle" fill="#FFB74D" font-size="8">AUC = 0.9877 ★</text>
+  <text x="616" y="1308" text-anchor="middle" fill="#78909C" font-size="8.5">Individual Model</text>
+  <text x="616" y="1320" text-anchor="middle" fill="#90A4AE" font-size="8">AUC = 0.9873 max</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="460" y1="1334" x2="460" y2="1378" stroke="#455A64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="342" y="1344" width="236" height="18" rx="9" fill="#37474F"/>
+  <text x="460" y="1357" text-anchor="middle" fill="#A5D6A7" font-size="9.5" font-weight="600">Final Model: Voting Ensemble (top 3)  ★</text>
+
+  <!-- ══════════════════════════════════════════════════════════
+       BLOCK 6 — HYPERPARAMETER TUNING + FINAL EVAL
+  ═══════════════════════════════════════════════════════════ -->
+  <rect x="70" y="1380" width="780" height="374" rx="8" fill="#0A3D2E" filter="url(#shadow)"/>
+  <!-- Teal header -->
+  <rect x="70" y="1380" width="780" height="28" rx="8" fill="#00695C"/>
+  <rect x="70" y="1400" width="780" height="8" rx="0" fill="#00695C"/>
+  <text x="460" y="1398" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" letter-spacing="1">▶  BLOCK 6: HYPERPARAMETER TUNING + FINAL EVALUATION</text>
+
+  <!-- RandomizedSearchCV box -->
+  <rect x="82" y="1416" width="360" height="168" rx="7" fill="#0D3325" filter="url(#softShadow)"/>
+  <rect x="82" y="1416" width="360" height="22" rx="7" fill="#00796B"/>
+  <rect x="82" y="1430" width="360" height="8" rx="0" fill="#00796B"/>
+  <text x="262" y="1430" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700">RandomizedSearchCV</text>
+  <text x="262" y="1448" text-anchor="middle" fill="#80CBC4" font-size="8.5">n_iter=20 | cv=5 | scoring='f1_weighted'</text>
+  <!-- Param table -->
+  <rect x="94" y="1456" width="338" height="14" rx="2" fill="#00695C44"/>
+  <text x="108" y="1467" fill="#FFFFFF" font-size="8.5" font-weight="700">Hyperparameter</text>
+  <text x="380" y="1467" text-anchor="end" fill="#FFFFFF" font-size="8.5" font-weight="700">Optimal</text>
+  <text x="108" y="1483" fill="#B2DFDB" font-size="8.5">n_estimators</text><text x="380" y="1483" text-anchor="end" fill="#FFD580" font-size="8.5">200</text>
+  <text x="108" y="1497" fill="#B2DFDB" font-size="8.5">max_features</text><text x="380" y="1497" text-anchor="end" fill="#FFD580" font-size="8.5">'sqrt'</text>
+  <text x="108" y="1511" fill="#B2DFDB" font-size="8.5">max_depth</text><text x="380" y="1511" text-anchor="end" fill="#FFD580" font-size="8.5">None</text>
+  <text x="108" y="1525" fill="#B2DFDB" font-size="8.5">min_samples_split</text><text x="380" y="1525" text-anchor="end" fill="#FFD580" font-size="8.5">2</text>
+  <text x="108" y="1539" fill="#B2DFDB" font-size="8.5">min_samples_leaf</text><text x="380" y="1539" text-anchor="end" fill="#FFD580" font-size="8.5">1</text>
+  <!-- Best CV -->
+  <rect x="94" y="1548" width="338" height="28" rx="4" fill="#004D40AA"/>
+  <text x="262" y="1560" text-anchor="middle" fill="#A5D6A7" font-size="9" font-weight="700">Best CV F1 (5-fold) = 0.9032</text>
+  <text x="262" y="1572" text-anchor="middle" fill="#80CBC4" font-size="8">Total fits: 20 iter × 5 folds = 100 model trains</text>
+
+  <!-- Feature Importance box -->
+  <rect x="454" y="1416" width="390" height="168" rx="7" fill="#0D3325" filter="url(#softShadow)"/>
+  <rect x="454" y="1416" width="390" height="22" rx="7" fill="#00796B"/>
+  <rect x="454" y="1430" width="390" height="8" rx="0" fill="#00796B"/>
+  <text x="649" y="1430" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700">Feature Importance Analysis</text>
+  <!-- Bars -->
+  <text x="466" y="1452" fill="#FFD580" font-size="8.5" font-weight="700">Top-5 Predictors (RF feature_importances_):</text>
+  <!-- Feature 1 -->
+  <text x="466" y="1470" fill="#B2DFDB" font-size="8.5">HbA1c_level</text>
+  <rect x="572" y="1461" width="120" height="11" rx="3" fill="#1B5E2044"/><rect x="572" y="1461" width="118" height="11" rx="3" fill="#2E7D32CC"/>
+  <text x="697" y="1470" fill="#A5D6A7" font-size="8.5" font-weight="700">0.3085  ★</text>
+  <!-- Feature 2 -->
+  <text x="466" y="1485" fill="#B2DFDB" font-size="8.5">fasting_glucose</text>
+  <rect x="572" y="1476" width="120" height="11" rx="3" fill="#1B5E2044"/><rect x="572" y="1476" width="115" height="11" rx="3" fill="#2E7D32CC"/>
+  <text x="697" y="1485" fill="#A5D6A7" font-size="8.5">0.2984</text>
+  <!-- Feature 3 -->
+  <text x="466" y="1500" fill="#B2DFDB" font-size="8.5">bmi</text>
+  <rect x="572" y="1491" width="120" height="11" rx="3" fill="#1B5E2044"/><rect x="572" y="1491" width="108" height="11" rx="3" fill="#2E7D32CC"/>
+  <text x="697" y="1500" fill="#A5D6A7" font-size="8.5">0.2754</text>
+  <!-- Feature 4 -->
+  <text x="466" y="1515" fill="#B2DFDB" font-size="8.5">cholesterol_level</text>
+  <rect x="572" y="1506" width="120" height="11" rx="3" fill="#1B5E2044"/><rect x="572" y="1506" width="30" height="11" rx="3" fill="#2E7D32CC"/>
+  <text x="697" y="1515" fill="#A5D6A7" font-size="8.5">0.0209</text>
+  <!-- Feature 5 -->
+  <text x="466" y="1530" fill="#B2DFDB" font-size="8.5">calorie_activity*</text>
+  <rect x="572" y="1521" width="120" height="11" rx="3" fill="#1B5E2044"/><rect x="572" y="1521" width="26" height="11" rx="3" fill="#FF6F00CC"/>
+  <text x="697" y="1530" fill="#FFD580" font-size="8.5">0.0181  ✦</text>
+  <text x="466" y="1546" fill="#80CBC4" font-size="7.5" font-style="italic">* ✦ engineered feature — validates domain-driven FE strategy</text>
+  <rect x="466" y="1558" width="362" height="18" rx="4" fill="#004D40AA"/>
+  <text x="649" y="1570" text-anchor="middle" fill="#A5D6A7" font-size="8.5">Top 3 features = 88% of total importance</text>
+
+  <!-- Final eval + serialisation row -->
+  <rect x="82" y="1596" width="232" height="138" rx="7" fill="#0D3325" filter="url(#softShadow)"/>
+  <rect x="82" y="1596" width="232" height="22" rx="7" fill="#004D40"/>
+  <text x="198" y="1611" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">Final Test Evaluation</text>
+  <text x="198" y="1630" text-anchor="middle" fill="#80CBC4" font-size="8.5">Accuracy    = 0.9150</text>
+  <text x="198" y="1644" text-anchor="middle" fill="#80CBC4" font-size="8.5">F1-Weighted = 0.9147</text>
+  <text x="198" y="1658" text-anchor="middle" fill="#FFD580" font-size="8.5" font-weight="700">AUC-ROC     = 0.9877  ★</text>
+  <text x="198" y="1672" text-anchor="middle" fill="#80CBC4" font-size="8">95% CI: [0.9843, 0.9912]</text>
+  <rect x="94" y="1680" width="208" height="44" rx="4" fill="#1B5E2055"/>
+  <text x="198" y="1695" text-anchor="middle" fill="#A5D6A7" font-size="8.5">Per-Class F1:</text>
+  <text x="198" y="1709" text-anchor="middle" fill="#B2DFDB" font-size="8">Low: 0.94 | Pre: 0.78 | High: 0.95</text>
+  <text x="198" y="1722" text-anchor="middle" fill="#FFD580" font-size="7.5" font-weight="600">⚠  Prediabetes lowest → future SMOTE</text>
+
+  <rect x="326" y="1596" width="232" height="138" rx="7" fill="#0D3325" filter="url(#softShadow)"/>
+  <rect x="326" y="1596" width="232" height="22" rx="7" fill="#004D40"/>
+  <text x="442" y="1611" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">Visualisation Dashboard</text>
+  <text x="442" y="1630" text-anchor="middle" fill="#80CBC4" font-size="8.5">• AUC-ROC bar chart (all models)</text>
+  <text x="442" y="1644" text-anchor="middle" fill="#80CBC4" font-size="8.5">• Confusion matrix heatmap</text>
+  <text x="442" y="1658" text-anchor="middle" fill="#80CBC4" font-size="8.5">• Per-class ROC curves (OvR)</text>
+  <text x="442" y="1672" text-anchor="middle" fill="#80CBC4" font-size="8.5">• 10-fold CV F1 boxplots</text>
+  <text x="442" y="1686" text-anchor="middle" fill="#80CBC4" font-size="8.5">• Feature importance bar chart</text>
+  <text x="442" y="1700" text-anchor="middle" fill="#80CBC4" font-size="8.5">• Summary comparison table</text>
+  <text x="442" y="1718" text-anchor="middle" fill="#FFD580" font-size="8">→ diabetes_model_results.png</text>
+
+  <rect x="570" y="1596" width="274" height="138" rx="7" fill="#0D3325" filter="url(#softShadow)"/>
+  <rect x="570" y="1596" width="274" height="22" rx="7" fill="#004D40"/>
+  <text x="707" y="1611" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700">Model Serialisation &amp; Outputs</text>
+  <text x="707" y="1630" text-anchor="middle" fill="#80CBC4" font-size="8.5">→ diabetes_best_model.pkl</text>
+  <text x="707" y="1644" text-anchor="middle" fill="#80CBC4" font-size="8.5">→ diabetes_model_comparison.csv</text>
+  <text x="707" y="1658" text-anchor="middle" fill="#80CBC4" font-size="8.5">→ diabetes_model_results.png</text>
+  <rect x="582" y="1666" width="250" height="58" rx="4" fill="#1B5E2055"/>
+  <text x="707" y="1681" text-anchor="middle" fill="#A5D6A7" font-size="8.5">Load model in production:</text>
+  <text x="707" y="1695" text-anchor="middle" fill="#FFD580" font-size="8">model = joblib.load('best_model.pkl')</text>
+  <text x="707" y="1709" text-anchor="middle" fill="#FFD580" font-size="8">pred = model.predict(new_patient_df)</text>
+
+  <!-- ══════════════════════════════════════════════════════════
+       OUTPUT NODE — Final deployment
+  ═══════════════════════════════════════════════════════════ -->
+  <!-- Arrow 6→output -->
+  <line x1="460" y1="1754" x2="460" y2="1796" stroke="#455A64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- Output parallelogram (green data node) -->
+  <polygon points="88,1800 832,1800 850,1900 70,1900" fill="url(#finalGreen)" filter="url(#shadow)"/>
+  <text x="460" y="1826" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" letter-spacing="1">▶  OUTPUT: DEPLOYED DECISION-SUPPORT MODEL</text>
+  <text x="460" y="1848" text-anchor="middle" fill="#D5F5E3" font-size="10.5">Best Model: Soft Voting Ensemble (LR + MLP + SVM-RBF)</text>
+  <text x="460" y="1866" text-anchor="middle" fill="#D5F5E3" font-size="10.5">Accuracy: 91.5%  |  AUC-ROC: 0.9877  |  F1-Weighted: 0.9147</text>
+  <text x="460" y="1884" text-anchor="middle" fill="#FFD580" font-size="10.5" font-weight="600">Classes: Low Risk  |  Prediabetes  |  High Risk</text>
+  <rect x="820" y="1802" width="22" height="18" rx="4" fill="#FFFFFF22"/>
+  <text x="831" y="1815" text-anchor="middle" fill="#D5F5E3" font-size="9" font-weight="700">OUT</text>
+
+  <!-- ══════════════════════════════════════════════════════════
+       LEGEND
+  ═══════════════════════════════════════════════════════════ -->
+  <rect x="70" y="1916" width="780" height="142" rx="8" fill="#1B2A3B" filter="url(#shadow)"/>
+  <text x="460" y="1938" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" letter-spacing="1">LEGEND</text>
+  <!-- Legend items -->
+  <!-- Green parallelogram -->
+  <polygon points="96,1952 196,1952 200,1970 92,1970" fill="url(#greenGrad)"/>
+  <text x="204" y="1966" fill="#CFD8DC" font-size="9.5" font-weight="500">  Data Node (input / output)</text>
+  <!-- Blue rect -->
+  <rect x="96" y="1980" width="104" height="18" rx="4" fill="url(#blueGrad)"/>
+  <text x="204" y="1993" fill="#CFD8DC" font-size="9.5" font-weight="500">  Process Block</text>
+  <!-- Orange diamond -->
+  <polygon points="148,2016 180,2026 148,2036 116,2026" fill="url(#orangeGrad)"/>
+  <text x="204" y="2030" fill="#CFD8DC" font-size="9.5" font-weight="500">  Decision Point</text>
+  <!-- Purple block -->
+  <rect x="96" y="2048" width="104" height="18" rx="4" fill="url(#purpleGrad)"/>
+  <text x="204" y="2061" fill="#CFD8DC" font-size="9.5" font-weight="500">  Ensemble Track B</text>
+  <!-- Arrows -->
+  <line x1="420" y1="1961" x2="480" y2="1961" stroke="#455A64" stroke-width="2" marker-end="url(#arrowSm)"/>
+  <text x="490" y="1966" fill="#CFD8DC" font-size="9.5">Main flow arrow</text>
+  <line x1="420" y1="1990" x2="480" y2="1990" stroke="#FFFFFF60" stroke-width="1.5" marker-end="url(#arrowWhite)"/>
+  <text x="490" y="1995" fill="#CFD8DC" font-size="9.5">Internal block arrow</text>
+  <rect x="614" y="1948" width="220" height="88" rx="6" fill="#0D1B2A"/>
+  <text x="724" y="1965" text-anchor="middle" fill="#90CAF9" font-size="9" font-weight="700">★  = Best performing model</text>
+  <text x="724" y="1981" text-anchor="middle" fill="#FFD580" font-size="9">✦  = Engineered feature contribution</text>
+  <text x="724" y="1997" text-anchor="middle" fill="#FF8F00" font-size="9">⚠  = Data leakage warning</text>
+  <text x="724" y="2013" text-anchor="middle" fill="#80CBC4" font-size="9">OvR = One-vs-Rest multi-class AUC</text>
+  <text x="724" y="2029" text-anchor="middle" fill="#80CBC4" font-size="9">OOF = Out-of-Fold predictions</text>
+  <text x="724" y="2045" text-anchor="middle" fill="#80CBC4" font-size="9">IR  = Imbalance Ratio</text>
+
+  <!-- Bottom caption -->
+  <rect x="0" y="2060" width="920" height="20" fill="#0D2137"/>
+  <text x="460" y="2074" text-anchor="middle" fill="#90CAF9" font-size="9" font-weight="400">Figure 8.1  |  System Architecture  |  ML-Based Diabetes Risk Classification  |  Research Proposal 2025</text>
+
+</svg>
