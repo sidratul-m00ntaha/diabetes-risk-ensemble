@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Diabetes Risk Classification Using Machine Learning
 
 A comparative study of 9 supervised learning algorithms + 2 ensemble 
@@ -30,3 +31,7 @@ python src/pipeline.py
 
 ## Project Structure
 See the diagram in `outputs/system_architecture.svg`
+=======
+# diabetes-risk-ensemble
+Domain-driven ensemble ML framework for multi-class diabetes risk prediction and decision support
+>>>>>>> 74429331c44006e6cac55aabbe90b1a4cd7204f0
